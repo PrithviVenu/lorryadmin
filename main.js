@@ -15,11 +15,15 @@
  * limitations under the License.
  */
 
-var config = {
-  "mapsApiKey": "",
-  "firebaseApiKey": "",
-  "firebaseDatabaseURL": "",
-};
+var config = {}; 
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        config = JSON.parse(this.responseText);
+       }
+    };
+xmlhttp.open("GET", "config.json", false);
+xmlhttp.send();
 
 var app = firebase.initializeApp({
   apiKey: config.firebaseApiKey,
