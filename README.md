@@ -1,4 +1,4 @@
-# Admin
+# Lorry Admin
 
 This is a web interface for administrators to see a quick overview of all the
 assets being tracked.
@@ -17,6 +17,13 @@ outlined in
 To authorize access to the Firebase Realtime Database, get your authentication credentials as outlined in
 [the Firebase documentation](https://firebase.google.com/docs/web/setup).
 
-Edit the file at the top of `main.js`:
+Create a file "config.json"
 * Add your Maps API key as the value of `mapsApiKey`.
 * Add your Firebase API key in `firebaseApiKey` and the URL of your Firebase Realtime Database in `firebaseDatabaseURL`.
+```
+var config = {
+  "mapsApiKey": "",
+  "firebaseApiKey": "",
+  "firebaseDatabaseURL": "",
+};
+```
